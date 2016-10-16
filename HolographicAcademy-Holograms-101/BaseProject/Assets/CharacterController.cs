@@ -24,7 +24,12 @@ public class CharacterController : MonoBehaviour {
 
         //the original position of the character
         myOriginalPosition = transform.position;
-	}
+
+        foreach (Renderer r in gameObject.transform.GetComponentsInChildren<Renderer>())
+        {
+            r.enabled = false;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
