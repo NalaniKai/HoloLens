@@ -15,9 +15,11 @@ public class CharacterController : MonoBehaviour {
     public float tSpeed;
 
     private Vector3 myOriginalPosition;
+    public AudioClip nurseStory;
+    public AudioSource nurseSource;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         // Turns off the cursor so we dont see it on screen
         // also locks the cursur to be in the game window
         //Cursor.lockState = CursorLockMode.Locked;
@@ -29,6 +31,7 @@ public class CharacterController : MonoBehaviour {
         {
             r.enabled = false;
         }
+        nurseSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -63,4 +66,9 @@ public class CharacterController : MonoBehaviour {
             GetComponentInChildren<CharacterCameraController>().mySmoothV = new Vector2(0, 0);
         }
 	}
+
+    public AudioSource getsound()
+    {
+        return nurseSource;
+    }
 }

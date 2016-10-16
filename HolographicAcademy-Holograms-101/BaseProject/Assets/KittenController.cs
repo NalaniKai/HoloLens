@@ -24,9 +24,9 @@ public class KittenController : MonoBehaviour
         {
             r.enabled = true;
         }
-        //AudioSource sound = myNurse.GetComponent<ChefController>().getsound();
-        //sound.Play();
-        //Invoke("GoodBye", 26);
+        AudioSource sound = myNurse.GetComponent<CharacterController>().getsound();
+        sound.Play();
+        Invoke("GoodBye", 20);
 
 
     }
