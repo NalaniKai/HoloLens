@@ -24,4 +24,13 @@ public class ChefController : MonoBehaviour {
     {
         return chefSource;
     }
+
+    void GoAway()
+    {
+        // Just do the same logic as a Select gesture.
+        foreach (Renderer r in gameObject.transform.GetComponentsInChildren<Renderer>())
+        {
+            r.enabled = false;
+        }
+    }
 }

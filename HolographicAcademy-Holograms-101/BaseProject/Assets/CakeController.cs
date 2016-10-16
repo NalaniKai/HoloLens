@@ -23,6 +23,15 @@ public class CakeController : MonoBehaviour {
         }
         AudioSource sound = myChef.GetComponent<ChefController>().getsound();
         sound.Play();
+        Invoke("GoodBye", 26);
 
+
+    }
+    void GoodBye()
+    {
+        foreach (Renderer r in myChef.transform.GetComponentsInChildren<Renderer>())
+        {
+            r.enabled = false;
+        }
     }
 }
